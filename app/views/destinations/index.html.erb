@@ -1,9 +1,18 @@
+<%=form_for(@destination) do |f|%>
+	<%= f.text_field :name%>
+	<%= f.submit%>
+<%end%>
+<% @destinations.each do |destination|%>
+	<%=destination.name%>
+<%end%>
+
 <div id='map'></div>
+
 <script>
 
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2FkaHU4OSIsImEiOiJjaWl4dzZic3cwMDF5dWRsd3BnMTgzaHE3In0.uT95amtQp81LBXzcUkADng';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([38.91338, -77.03236], 16);
+    .setView([38.91338, -77.03236], 2);
 
 <% @destinations.each do |destination| %>
 	L.mapbox.featureLayer(<%= to_geojson destination %>).addTo(map);

@@ -4,7 +4,7 @@ module DestinationsHelper
 		    type: 'Feature',
 		    geometry: {
 		      type: 'Point',
-		      coordinates: [destination.location.first, destination.location.last]
+		      coordinates: [destination.coordinates.first, destination.coordinates.last]
 		    },
 		    properties: {
 		      name: destination.name,
