@@ -2,7 +2,9 @@
 <div class="sidebar">
 	
     <%=form_for(@destination) do |f|%>
-        <%= label_tag(:name, "search_icon") %>
+        <%= label_tag(:name, "search_icon") do%>
+            <div>Div interno</div>
+        <%end%>
         <%= f.search_field :name , placeholder: 'Where do you want to go?'%>
         <%= f.submit%>
     <%end%>
