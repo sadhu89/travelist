@@ -183,7 +183,41 @@ fieldset {
 	font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0;
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+figure{
+    margin: 0 !important;
+    position: relative;
+    img{
+        border-radius: 6px;
+    }
+    .shadow_mask{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(-180deg, rgba(50,50,50,0.00) 0%, rgba(50,50,50,0.00) 47%, rgba(50,50,50,0.12) 69%, rgba(50,50,50,0.28) 87%, rgba(50,50,50,0.48) 100%);
+        -webkit-box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.02);
+        -moz-box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.02);
+        box-shadow:inset 0px 0px 0px 1px rgba(0,0,0,0.02);
+        border-radius: 6px;
+    }
+    figcaption{
+        position: absolute;
+        bottom: 26px;
+        left: 20px;
+        color: #FFFFFF;
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 32px;
+    }
 }
 
 

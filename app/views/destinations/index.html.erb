@@ -18,7 +18,13 @@
     <%end%>
     <ul>
         <% @destinations.each do |destination|%>
-            <li><%=destination.name.camelize%></li>
+            <li>
+                <figure>
+                    <img src="https://s3.amazonaws.com/f.cl.ly/items/3p0l2V2e143D0S383k1U/First_Destination@2x.png" width="280" height="260">
+                    <div class="shadow_mask"></div>
+                    <figcaption><%=destination.name.camelize%></figcaption>
+                </figure>
+            </li>
         <%end%>
     </ul>
 </div>
