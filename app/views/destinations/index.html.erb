@@ -2,8 +2,9 @@
 <div class="sidebar">
 	
     <%=form_for(@destination) do |f|%>
-	   <%= f.text_field :name%>
-	   <%= f.submit%>
+        <%= label_tag(:name, "search_icon") %>
+        <%= f.search_field :name , placeholder: 'Where do you want to go?'%>
+        <%= f.submit%>
     <%end%>
     <% @destinations.each do |destination|%>
         <%=destination.name%>
