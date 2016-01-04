@@ -8,9 +8,11 @@
         <%= f.search_field :name , placeholder: 'Where do you want to go?'%>
         <%= f.submit%>
     <%end%>
-    <% @destinations.each do |destination|%>
-        <%=destination.name%>
-    <%end%>
+    <ul>
+        <% @destinations.each do |destination|%>
+            <li><%=destination.name.camelize%></li>
+        <%end%>
+    </ul>
 </div>
 
 <div id='map'></div>
