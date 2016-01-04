@@ -1,12 +1,24 @@
-<%=form_for(@destination) do |f|%>
-	<%= f.text_field :name%>
-	<%= f.submit%>
-<%end%>
-<% @destinations.each do |destination|%>
-	<%=destination.name%>
-<%end%>
+
+<div class="sidebar">
+	
+    <%=form_for(@destination) do |f|%>
+	   <%= f.text_field :name%>
+	   <%= f.submit%>
+    <%end%>
+    <% @destinations.each do |destination|%>
+        <%=destination.name%>
+    <%end%>
+</div>
 
 <div id='map'></div>
+
+
+
+
+
+
+
+<!-- Scripts -->
 
 <script>
 
@@ -15,7 +27,7 @@ var map = L.mapbox.map('map', 'mapbox.streets')
     .setView([38.91338, -77.03236], 2);
 
 <% @destinations.each do |destination| %>
-	L.mapbox.featureLayer(<%= to_geojson destination %>).addTo(map);
+    L.mapbox.featureLayer(<%= to_geojson destination %>).addTo(map);
 <%end%>
 
 </script>
