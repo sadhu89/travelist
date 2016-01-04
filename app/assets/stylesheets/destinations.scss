@@ -158,9 +158,18 @@ fieldset {
 	box-sizing: border-box;
 }
 
+.search_container{
+	position: relative;
+	svg{
+		position: absolute;
+		top: 12px;
+		left: 14px;
+	}
+}
+
 #destination_name {
     height: 38px;
-    padding: 0 15px;
+    padding: 0 15px 0 36px;
     color: $boulder;
     margin-bottom: 40px;
     width: 100%;
@@ -176,6 +185,7 @@ fieldset {
     font-weight: 400;
     font-style: normal
 }
+
 
 #map{
 	position: absolute;
