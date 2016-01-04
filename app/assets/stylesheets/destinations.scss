@@ -100,6 +100,14 @@ html, body{
 	height: 100%;
 }
 
+
+body{
+	font-family: "Lato", "Helvetica Neue", sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .sidebar{
 	float: left;
 	width: 360px;
