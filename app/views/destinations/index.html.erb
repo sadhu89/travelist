@@ -14,7 +14,7 @@
             <%= f.search_field :name , placeholder: 'Where do you want to go?'%>
 
         </div>
-        <%= f.submit%>
+        <%= f.submit class: 'hidden'%>
     <%end%>
     <ul>
         <% @destinations.each do |destination|%>
