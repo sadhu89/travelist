@@ -12,6 +12,7 @@
 
 /* Colors */
 
+$alabaster: #FAFAFA;
 $gallery: #ECECEC;
 $silver: #C9C9C9;
 $novel: #B7B7B7;
@@ -210,6 +211,18 @@ ul{
         }
         
     }
+    li.first{
+        figcaption{
+            bottom: 26px;
+        }
+        img{
+            height: 260px;
+        }
+        .more_icon{
+            bottom: 28px;
+        }
+
+    }
 }
 
 figure{
@@ -220,6 +233,7 @@ figure{
     transition: box-shadow .2s ease-out;
     img{
         border-radius: 6px;
+        height: 160px;
     }
     .shadow_mask{
         position: absolute;
@@ -234,17 +248,22 @@ figure{
     }
     figcaption{
         position: absolute;
-        bottom: 26px;
+        bottom: 14px;
         left: 20px;
         color: #FFFFFF;
         font-size: 24px;
         letter-spacing: 1px;
         line-height: 32px;
+        span{
+            color: $alabaster;
+            opacity: 0.6;
+            margin-right: 3px;
+        }
     }
     .more_icon{
         position: absolute;
         opacity: 0;
-        bottom: 28px;
+        bottom: 15px;
         right: 16px;
         display: block;
         line-height: 0;
