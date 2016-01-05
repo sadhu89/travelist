@@ -79,6 +79,12 @@ GEM
       mongo (~> 2.1)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
+    mongoid-compatibility (0.3.1)
+      activesupport
+      mongoid (>= 2.0)
+    mongoid_orderable (5.0.0)
+      mongoid
+      mongoid-compatibility
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
@@ -162,6 +168,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mongoid (~> 5.0.0)
+  mongoid_orderable
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)
