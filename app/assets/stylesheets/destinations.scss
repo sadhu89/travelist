@@ -212,14 +212,17 @@ ul{
         
     }
     li.first{
+        figure{
+            height: 260px;
+        }
         figcaption{
             bottom: 26px;
         }
-        img{
-            height: 260px;
-        }
+//        img{
+//            height: 260px;
+//        }
         .more_icon{
-            bottom: 28px;
+            bottom: 26px;
         }
 
     }
@@ -229,11 +232,24 @@ figure{
     margin: 0 !important;
     position: relative;
     box-shadow: 0px 8px 16px -6px rgba(0, 0, 0, 0.0);
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 6px;
+
     -webkit-transition: box-shadow .2s ease-out;
     transition: box-shadow .2s ease-out;
     img{
         border-radius: 6px;
-        height: 160px;
+        // Centered position for images
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+//        height: 160px;
     }
     .shadow_mask{
         position: absolute;
@@ -263,7 +279,7 @@ figure{
     .more_icon{
         position: absolute;
         opacity: 0;
-        bottom: 15px;
+        bottom: 14px;
         right: 16px;
         display: block;
         line-height: 0;
