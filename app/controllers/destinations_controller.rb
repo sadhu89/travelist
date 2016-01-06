@@ -9,6 +9,11 @@ class DestinationsController < ApplicationController
   	redirect_to root_path
   end
 
+  def destroy
+    Destination.find(params[:id]).destroy
+    redirect_to root_path
+  end
+
   private
   def destination_params
   	params.require(:destination).permit(:name)
