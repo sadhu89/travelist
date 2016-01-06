@@ -23,21 +23,26 @@
                     <img src="https://s3.amazonaws.com/f.cl.ly/items/3p0l2V2e143D0S383k1U/First_Destination@2x.png" width="280" height="260">
                     <div class="shadow_mask"></div>
                     <figcaption><span><%="#{destination.position}."%></span><%="#{destination.name.camelize}"%></figcaption>
-                    <a class="more_icon" href="#">
+                    <a data-jq-dropdown="#jq-dropdown-1" class="more_icon" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="3" viewBox="0 0 15 3">
                             <title>dots_icon</title>
                             <path d="M1.5 3C2.328 3 3 2.328 3 1.5S2.328 0 1.5 0 0 .672 0 1.5.672 3 1.5 3zm6 0C8.328 3 9 2.328 9 1.5S8.328 0 7.5 0 6 .672 6 1.5 6.672 3 7.5 3zm6 0c.828 0 1.5-.672 1.5-1.5S14.328 0 13.5 0 12 .672 12 1.5 12.672 3 13.5 3z" fill="#FFF" fill-rule="evenodd" />
                         </svg>
                     </a>
                 </figure>
-                <%= link_to "Delete", destination, method: :delete %>
+                <div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
+                    <ul class="jq-dropdown-menu">
+                        <li>
+                            <%= link_to "Delete", destination, method: :delete %>
+                        </li>
+                    </ul>
+                </div>
             </li>
         <%end%>
     </ul>
 </div>
 
 <div id='map'></div>
-
 
 
 
