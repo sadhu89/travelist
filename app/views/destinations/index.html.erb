@@ -20,7 +20,7 @@
         <% @destinations.each do |destination|%>
             <li <%= "class='first'".html_safe if destination.position==1%>>
                 <figure>
-                    <img src="<%=destination.image_url%>" width="280" height="260">
+                    <img src="<%=destination.image_url%>" width="280" height="280">
                     <div class="shadow_mask"></div>
                     <figcaption><span><%="#{destination.position}."%></span><%="#{destination.name.camelize}"%></figcaption>
                     <a data-jq-dropdown="#jq-dropdown-<%="#{destination.id}"%>" class="more_icon" href="#">
@@ -40,6 +40,11 @@
             </li>
         <%end%>
     </ul>
+    <div id="empty_state">
+        <img src="https://s3.amazonaws.com/f.cl.ly/items/2U1O1k1m0o0l3k0C0Q3Q/empty_state@2x.png" width="250" height="200" alt="empty state">
+        <p>You haven’t added anything yet</p>
+        <button id="search_label">ADD NEW PLACE</button>
+    </div>
 </div>
 
 <div id='map'></div>

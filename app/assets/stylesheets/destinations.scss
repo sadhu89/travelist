@@ -291,6 +291,34 @@ figure{
     }
 }
 
+#empty_state{
+    text-align: center;
+    margin-top: 48px;
+    p{
+        font-size: 15px;
+        color: #9AA0A3;
+        letter-spacing: 0.6px;
+        line-height: 16px;
+        margin-top: 0px;
+    }
+    #search_label{
+        height: 32px;
+        padding: 0 15px;
+        margin-bottom: 40px;
+        font-size: 11px;
+        outline: none;
+        background: #4A90E2;
+        font-weight: 800;
+        color: #FFFFFF;
+        appearance: none;
+        box-sizing: border-box;
+        border-radius: 3px;
+        border: 1px solid #4687D2;
+        font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: 0.4px;
+        font-style: normal;
+    }
+}
 
 #map{
 	position: absolute;
