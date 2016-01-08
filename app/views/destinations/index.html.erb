@@ -20,7 +20,7 @@
         <% @destinations.each do |destination|%>
             <li <%= "class='first'".html_safe if destination.position==1%>>
                 <figure>
-                    <img src="https://s3.amazonaws.com/f.cl.ly/items/3p0l2V2e143D0S383k1U/First_Destination@2x.png" width="280" height="260">
+                    <img src="<%=destination.image_url%>" width="280" height="260">
                     <div class="shadow_mask"></div>
                     <figcaption><span><%="#{destination.position}."%></span><%="#{destination.name.camelize}"%></figcaption>
                     <a data-jq-dropdown="#jq-dropdown-<%="#{destination.id}"%>" class="more_icon" href="#">

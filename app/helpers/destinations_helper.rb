@@ -1,10 +1,12 @@
 module DestinationsHelper
 	def to_geojson destination
+		x=destination.coordinates.first rescue 0
+		y=destination.coordinates.last rescue 0
 		h={
 		    type: 'Feature',
 		    geometry: {
 		      type: 'Point',
-		      coordinates: [destination.coordinates.first, destination.coordinates.last]
+		      coordinates: [x, y]
 		    },
 		    properties: {
 		      name: destination.name,
