@@ -186,6 +186,14 @@ fieldset {
     letter-spacing: 0;
     font-weight: 400;
     font-style: normal;
+    -webkit-transition: border .15s ease-out;
+    transition: border .15s ease-out;
+}
+
+#destination_name:focus{
+    border: 1px solid $silver;
+    -webkit-transition: border .15s ease-in;
+    transition: border .15s ease-in;
 }
 
 ul{

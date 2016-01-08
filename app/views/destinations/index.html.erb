@@ -69,3 +69,12 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 <%end%>
 
 </script>
+
+<script>
+
+$( document ).ready(function() {
+    $("#search_label").on('click', function(){
+        $("#destination_name").focus();
+    });
+});
+</script>
