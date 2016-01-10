@@ -61,8 +61,11 @@
 <script>
 
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2FkaHU4OSIsImEiOiJjaWl4dzZic3cwMDF5dWRsd3BnMTgzaHE3In0.uT95amtQp81LBXzcUkADng';
-var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([38.91338, -77.03236], 2);
+var map = L.mapbox.map('map', 'mapbox.streets', {
+        minZoom: 2,
+        maxZoom: 12
+
+    }).setView([38.91338, -77.03236], 3);
 
 <% @destinations.each do |destination| %>
     L.mapbox.featureLayer(<%= to_geojson destination %>).addTo(map);
