@@ -42,7 +42,7 @@
     </ul>
     <% if @destinations.empty? %>
         <div id="empty_state">
-            <img src="https://s3.amazonaws.com/f.cl.ly/items/2U1O1k1m0o0l3k0C0Q3Q/empty_state@2x.png" width="250" height="200" alt="empty state">
+            <%=image_tag "empty_state2@2x.png", width:"250", height:"200", alt:"empty state"%>
             <p>You haven’t added anything yet</p>
             <button id="search_label">ADD NEW PLACE</button>
         </div>
