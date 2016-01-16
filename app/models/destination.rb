@@ -16,4 +16,6 @@ class Destination
   before_validation do |destination|
     destination.image_url=Picture.get_url(name)
   end
+
+  belongs_to :user
 end

@@ -1,6 +1,6 @@
 
 <div class="sidebar">
-	
+	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
     <%=form_for(@destination) do |f|%>
 
         <div class="search_container">

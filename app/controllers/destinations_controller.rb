@@ -1,11 +1,13 @@
 class DestinationsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-  	@destinations=Destination.all
+  	@destinations=current_user.destinations
   	@destination=Destination.new
   end
 
   def create
-  	Destination.create!(destination_params)
+  	current_user.destinations.create!(destination_params)
   	redirect_to root_path
   end
 
