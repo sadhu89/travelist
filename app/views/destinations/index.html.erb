@@ -1,3 +1,67 @@
+<section class="login_mask">
+    <div class="mask_content">
+        
+        <h1>Travelist</h1>
+
+        <div class="tabs">
+
+           <div class="tab">
+               <input type="radio" id="tab-1" name="tab-group-1" checked>
+               <label for="tab-1">Sign up</label>
+               
+               <div class="content">
+
+                    <form action>
+                        
+                        <div class="field">
+                            <input type="text" id="name" name="name" autofocus="" placeholder="Name">
+                        </div>
+
+                        <div class="field">
+                            <input type="email" id="email" name="email" autofocus="" placeholder="Email">
+                        </div>
+
+                        <div class="field">
+                            <input type="password" id="password" name="username" autofocus="" placeholder="Password">
+                        </div>
+
+                        <div class="actions">
+                            <input type="submit" name="commit" value="Create free account">
+                        </div>
+
+                    </form>
+
+               </div> 
+           </div>
+            
+           <div class="tab">
+               <input type="radio" id="tab-2" name="tab-group-1">
+               <label for="tab-2">Sign in</label>
+               
+               <div class="content">
+
+                    <form action>
+
+                        <div class="field">
+                            <input type="email" id="email" name="email" autofocus="" placeholder="Email">
+                        </div>
+
+                        <div class="field">
+                            <input type="password" id="password" name="username" autofocus="" placeholder="Password">
+                        </div>
+
+                        <div class="actions">
+                            <input type="submit" name="commit" value="Log in">
+                        </div>
+
+                    </form>
+               </div> 
+           </div>
+            
+        </div>
+
+    </div>
+</section>
 
 <div class="sidebar">
 	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
