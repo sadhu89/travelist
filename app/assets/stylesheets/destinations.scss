@@ -142,12 +142,39 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     -webkit-appearance: none;
 }
 
+input{
+    height: 38px;
+    padding: 0 15px;
+    color: $boulder;
+    margin-bottom: 12px !important;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+    appearance: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $gallery;
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-transition: border .15s ease-out;
+    transition: border .15s ease-out;
+}
+
 fieldset {
     border: 1px solid $silver;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
 
+
+.primary-button{
+    background-color: #4B97E3;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #FFFFFF;
+}
 
 .login_mask{
     position: absolute;
@@ -156,7 +183,7 @@ fieldset {
     right: 0;
     bottom: 0;
     z-index: 9999;
-    background-color: rgba(245, 245, 245, .85);
+    background-color: rgba(255, 255, 255, .90);
 }
 
 .notice, .alert{
@@ -182,25 +209,26 @@ fieldset {
     border-radius: 6px;
     overflow: hidden;
     background: #FFFFFF;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
     z-index: 3;
     padding: 40px;
     h1{
         text-align: center;
+        margin-bottom: 2.5rem;
     }
     .tabs {
       position: relative;   
-      min-height: 200px; /* This part sucks */
+      min-height: 260px;
       clear: both;
-      margin: 25px 0;
     }
     .tab {
       float: left;
     }
     .tab > label {
-      background: #eee; 
-      padding: 10px; 
-      border: 1px solid #ccc; 
+      background: #fcfcfc;
+      color: #707070;
+      padding: 10px 16px; 
+      border: 1px solid #e4e4e4;; 
       margin-left: -1px; 
       position: relative;
       left: 1px; 
@@ -216,12 +244,14 @@ fieldset {
       right: 0;
       bottom: 0;
       padding: 20px;
-      border: 1px solid #ccc; 
+      border: 1px solid #e4e4e4;; 
     }
     [type=radio]:checked ~ label {
-      background: white;
-      border-bottom: 1px solid white;
-      z-index: 2;
+        background: white;
+        color: #333333;
+        border-top: 1px solid #4B97E3;
+        border-bottom: 1px solid white;
+        z-index: 2;
     }
     [type=radio]:checked ~ label ~ .content {
       z-index: 1;
