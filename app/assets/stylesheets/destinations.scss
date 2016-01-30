@@ -177,6 +177,7 @@ fieldset {
 }
 
 .login_mask{
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -413,7 +414,7 @@ figure{
 
 #empty_state{
     text-align: center;
-    margin-top: 48px;
+    margin-top: 84px;
     p{
         font-size: 15px;
         color: #9AA0A3;
@@ -422,8 +423,8 @@ figure{
         margin-top: 0px;
     }
     #search_label{
-        height: 32px;
-        padding: 0 15px;
+/*        height: 32px;*/
+        padding: 8px 15px;
         margin-bottom: 40px;
         font-size: 11px;
         outline: none;
