@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/sadhu89/travelist.png?label=ready&title=Ready)](https://waffle.io/sadhu89/travelist)
 #Travelist
 
 ##Dependencies
