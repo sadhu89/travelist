@@ -140,6 +140,27 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 <script>
 
 $( document ).ready(function() {
+
+    if (navigator.geolocation) {
+        map.locate();
+        var myLayer = L.mapbox.featureLayer().addTo(map);
+            map.on('locationfound', function(e) {
+
+            myLayer.setGeoJSON({
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [e.latlng.lng, e.latlng.lat]
+                },
+                properties: {
+                    'title': 'Here I am!',
+                    'marker-color': '#ff8888',
+                    'marker-symbol': 'star'
+                }
+            });
+        });
+    } 
+
     $('img').attr('draggable', false);
     $("#search_label").on('click', function(){
         $("#destination_name").focus();
