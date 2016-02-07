@@ -4,10 +4,10 @@
         <div class="right-links">
             <ul>
                 <li>
-                    <a href="http://localhost:3000/users/sign_in">LOG IN</a>
+                    <a href="#" class="log-in">LOG IN</a>
                 </li>
                 <li>
-                    <a href="http://localhost:3000/users/sign_up">SIGN UP</a>
+                    <a href="#" class="sign-up">SIGN UP</a>
                 </li>
             </ul>
         </div>
@@ -20,3 +20,42 @@
     <a href="#" class="button button-primary get-started">Get Started</a>
   </div>
 </div>
+
+
+<section class="signup_mask">
+    <div class="modal-overlay"></div>
+    <div class="mask_content">
+            Create Account
+    </div>
+</section>
+
+<section class="login_mask">
+    <div class="modal-overlay"></div>
+    <div class="mask_content">
+            Log in
+    </div>
+</section>
+
+<script>
+
+$( document ).ready(function() {
+
+    $(".get-started, .sign-up").on('click', function(){
+        $(".signup_mask").css('display','block');
+    });
+
+    $(".modal-overlay").on('click', function(){
+        $(".signup_mask").css('display','none');
+    });
+
+    $(".log-in").on('click', function(){
+        $(".login_mask").css('display','block');
+    });
+
+    $(".modal-overlay").on('click', function(){
+        $(".login_mask").css('display','none');
+    });
+
+});
+
+</script>

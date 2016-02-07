@@ -88,6 +88,11 @@
                 color: #A7A7A7;
                 text-decoration: none;
                 line-height: 19px;
+                -webkit-transition: color .1s ease-in;
+                transition: color .1s ease-in;
+                &:hover{
+                    color: #9A9A9A;
+                }
             }
         }
     }
@@ -114,5 +119,23 @@
             margin-bottom: 24px;
             color: #424242;
         }
+    }
+}
+
+.signup_mask, .login_mask{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    .modal-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(37, 40, 43, 0.6);
     }
 }
