@@ -4,6 +4,19 @@
 
 /* GENERAL */
 
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-touch-action: none;
+    text-rendering: optimizeLegibility;
+}
+
 .button{
     display: inline-block;
     padding: 8px 15px;
@@ -12,6 +25,7 @@
     font-weight: 800;
     line-height: 1.5;
     text-align: center;
+    letter-spacing: 0.4px;
     white-space: nowrap;
     vertical-align: middle;
     text-decoration: none;
@@ -54,7 +68,6 @@
 .get-started{
     font-size: 13px;
     padding: 12px 32px 10px;
-    letter-spacing: 0.4px;
 }
 
 
