@@ -260,6 +260,7 @@ fieldset {
 }
 
 header{
+    margin: 0 32px;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -267,7 +268,7 @@ header{
     display: box;
     display: flex;
     background: white;
-    padding-left: 36px;
+    padding-left: 4px;
     padding-top: 32px;
     padding-bottom: 16px;
     .menu{
@@ -318,8 +319,17 @@ header{
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    ul{
+        padding: 36px;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+    }
 }
 
+.new_destination{
+    margin-left: 32px; 
+    margin-right: 32px;
+}
 
 .search_container{
 	position: relative;
@@ -358,9 +368,6 @@ header{
 }
 
 ul{
-    padding: 36px;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
     list-style-type: none;
     margin: 0;
     li{
@@ -397,6 +404,11 @@ ul{
         }
 
     }
+}
+
+.top-shadow{
+    box-shadow: 0 -4px 0px 4px #FFFFFF, 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: all .15s ease-in;
 }
 
 figure{
