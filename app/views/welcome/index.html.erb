@@ -5,40 +5,9 @@
             <ul>
                 <li>
                     <a href="#" class="log-in">LOG IN</a>
-                    <%= form_for(:user, :url => session_path(:user)) do |f| %>
-                      <%= f.text_field :email %>
-                      <%= f.password_field :password %>
-                      <%= f.check_box :remember_me %>
-                      <%= f.label :remember_me %>
-                      <%= f.submit 'Sign in' %>
-                      <%= link_to "Forgot your password?", new_password_path(:user) %>
-                    <% end %>
                 </li>
                 <li>
                     <a href="#" class="sign-up">SIGN UP</a>
-                    <%= form_for(:user, url: registration_path(:user)) do |f| %>
-                      <div class="field">
-                        <%= f.label :email %><br />
-                        <%= f.email_field :email, autofocus: true %>
-                      </div>
-
-                      <div class="field">
-                        <%= f.label :password %>
-                        <% if @minimum_password_length %>
-                        <em>(<%= @minimum_password_length %> characters minimum)</em>
-                        <% end %><br />
-                        <%= f.password_field :password, autocomplete: "off" %>
-                      </div>
-
-                      <div class="field">
-                        <%= f.label :password_confirmation %><br />
-                        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-                      </div>
-
-                      <div class="actions">
-                        <%= f.submit "Sign up" %>
-                      </div>
-                    <% end %>
                 </li>
             </ul>
         </div>
@@ -56,14 +25,43 @@
 <section class="signup_mask">
     <div class="modal-overlay"></div>
     <div class="mask_content">
-            Create Account
+        <%= form_for(:user, url: registration_path(:user)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Sign up" %>
+          </div>
+        <% end %>
     </div>
 </section>
 
 <section class="login_mask">
     <div class="modal-overlay"></div>
     <div class="mask_content">
-            Log in
+        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+          <%= f.text_field :email %>
+          <%= f.password_field :password %>
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+          <%= f.submit 'Log in' %>
+          <%= link_to "Forgot your password?", new_password_path(:user) %>
+        <% end %>
     </div>
 </section>
 
