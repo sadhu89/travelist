@@ -476,13 +476,20 @@ figure{
 
 #empty_state{
     text-align: center;
-    margin-top: 84px;
+    -webkit-box-flex: 4;
+    -moz-box-flex: 4;
+    -o-box-flex: 4;
+    box-flex: 4;
+    -webkit-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
     p{
         font-size: 15px;
         color: #9AA0A3;
         letter-spacing: 0.6px;
         line-height: 16px;
         margin-top: 0px;
+        margin-bottom: 16px;
     }
 }
 
