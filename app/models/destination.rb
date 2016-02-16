@@ -12,7 +12,7 @@ class Destination
   
   geocoded_by :name                   # can also be an IP address
   after_validation :geocode           # auto-fetch coordinates
-  orderable base: 1                   # create postion field
+  orderable base: 1, scope: :user     # create postion field
   before_validation do |destination|
     destination.image_url=Picture.get_url(name)
   end
