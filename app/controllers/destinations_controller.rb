@@ -7,7 +7,7 @@ class DestinationsController < ApplicationController
   end
 
   def create
-  	current_user.destinations.create!(destination_params)
+  	current_user.destinations.create(destination_params)
   	redirect_to root_path
   end
 

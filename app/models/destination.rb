@@ -8,8 +8,10 @@ class Destination
   field :priority, type: Integer
   field :image_url, type: String
   field :coordinates, type: Array
-  field :location, type: Array
-  
+
+  validates :name, :uniqueness => { :case_sensitive => false }
+  validates :coordinates, uniqueness: true
+
   geocoded_by :name                   # can also be an IP address
   after_validation :geocode           # auto-fetch coordinates
   orderable base: 1, scope: :user     # create postion field
