@@ -17,7 +17,7 @@
 <div class="cover">
   <div class="content">
     <h1>Design and organize  your own  travel wish list</h1>
-    <a href="#" class="button button-primary get-started">Get Started</a>
+    <a href="#" class="button button-primary elevation-4 get-started">Get Started</a>
   </div>
 </div>
 
@@ -25,28 +25,30 @@
 <section class="signup_mask">
     <div class="modal-overlay"></div>
     <div class="mask_content">
-        <%= form_for(:user, url: registration_path(:user)) do |f| %>
-          <div class="field">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true %>
-          </div>
 
-          <div class="field">
-            <%= f.label :password %>
+        <div class="title">
+            SIGN UP
+            <div class="close">
+                <a href="#">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+
+
+        <%= form_for(:user, url: registration_path(:user)) do |f| %>
+
+            <input placeholder="Full Name" autofocus="autofocus" type="text">
+
+            <%= f.email_field :email, :placeholder => "Email Address", autofocus: true%>
+
             <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
-            <%= f.password_field :password, autocomplete: "off" %>
-          </div>
+            <% end %>
+            <%= f.password_field :password,  :placeholder => "Password", autocomplete: "off" %>
 
-          <div class="field">
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
-          </div>
+            <%= f.submit "Create Account", class: 'button button-primary elevation-1' %>
 
-          <div class="actions">
-            <%= f.submit "Sign up" %>
-          </div>
         <% end %>
     </div>
 </section>
@@ -54,13 +56,21 @@
 <section class="login_mask">
     <div class="modal-overlay"></div>
     <div class="mask_content">
+
+        <div class="title">
+            LOG IN
+            <div class="close">
+                <a href="#">
+                    <i class="material-icons">close</i>
+                </a>
+            </div>
+        </div>
+
         <%= form_for(:user, :url => session_path(:user)) do |f| %>
-          <%= f.text_field :email %>
-          <%= f.password_field :password %>
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-          <%= f.submit 'Log in' %>
-          <%= link_to "Forgot your password?", new_password_path(:user) %>
+          <%= f.email_field :email, :placeholder => "Email Address" %>
+          <%= f.password_field :password, :placeholder => "Password" %>
+          <%= f.submit 'Log in', class: 'button button-primary elevation-1' %>
+<!--          <%= link_to "Forgot your password?", new_password_path(:user) %> -->
         <% end %>
     </div>
 </section>
@@ -73,7 +83,7 @@ $( document ).ready(function() {
         $(".signup_mask").css('display','block');
     });
 
-    $(".modal-overlay").on('click', function(){
+    $(".modal-overlay, .close").on('click', function(){
         $(".signup_mask").css('display','none');
     });
 
@@ -81,7 +91,7 @@ $( document ).ready(function() {
         $(".login_mask").css('display','block');
     });
 
-    $(".modal-overlay").on('click', function(){
+    $(".modal-overlay, .close").on('click', function(){
         $(".login_mask").css('display','none');
     });
 

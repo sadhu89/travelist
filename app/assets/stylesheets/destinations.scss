@@ -145,14 +145,14 @@ input{
     height: 38px;
     padding: 0 15px;
     color: $boulder;
-    margin-bottom: 12px !important;
+/*    margin-bottom: 12px !important;*/
     width: 100%;
     font-size: 15px;
     outline: none;
     background: #fff;
     appearance: none;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 1px solid $gallery;
     font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0;
@@ -179,15 +179,14 @@ fieldset {
     left: 50%;
     z-index: 2;
     box-sizing: border-box;
-    width: 352px;
-    height: 450px;
+    width: 360px;
+/*    height: 450px;*/
     transform: translate(-50%, -50%);
-    border-radius: 6px;
+    border-radius: 2px;
     overflow: hidden;
     background: #FFFFFF;
     box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
     z-index: 3;
-    padding: 36px;
     h1{
         text-align: center;
         margin-bottom: 2.5rem;
@@ -212,6 +211,28 @@ fieldset {
     .tab [type=radio] {
       display: none;   
     }
+
+    .title{
+        text-align: center;
+        position: relative;
+        padding: 18px 0;
+        font-size: 14px;
+        height: 56px;
+        color: #525252;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        box-sizing: border-box;
+        background-color: #FCFCFC;
+        border-bottom: 1px solid #F2F2F2;
+        .close a{
+            position: absolute;
+            top: 15px;
+            right: 12px;
+            color: #C9C9C9;
+            height: 24px;
+        }
+    }
+
     .content {
       position: absolute;
       top: 30px;
@@ -220,7 +241,7 @@ fieldset {
       right: 0;
       bottom: 0;
       padding: 20px;
-      border: 1px solid #e4e4e4;; 
+      border: 1px solid #e4e4e4; 
     }
     [type=radio]:checked ~ label {
         background: white;
@@ -351,7 +372,7 @@ header{
     background: #fff;
     appearance: none;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 2px;
     border: 1px solid $gallery;
 	font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0;
