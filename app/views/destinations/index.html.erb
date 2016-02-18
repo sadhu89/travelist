@@ -13,29 +13,17 @@
                 <span class="section-title">Destinations</span>
             </div>
         </div>
+        <div class="new-destination">
+            <a href="#">
+                <i class="material-icons">add_location</i>
+            </a>
+        </div>
     </header>
     <div style="">
         
 
     <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
     </div>
-    <%=form_for(@destination) do |f|%>
-
-
-
-        <div class="search_container">
-            
-            <%= label_tag(:destination_name, "search_icon") do%>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
-                    <title>search_icon</title>
-                    <path d="M9.223 10.482C8.263 11.185 7.08 11.6 5.8 11.6 2.597 11.6 0 9.003 0 5.8S2.597 0 5.8 0s5.8 2.597 5.8 5.8c0 1.28-.415 2.464-1.118 3.423l3.136 3.136c.35.35.355.913.005 1.263-.348.348-.912.347-1.264-.005l-3.137-3.136zM5.8 10.255c2.458 0 4.45-1.992 4.45-4.45s-1.992-4.45-4.45-4.45-4.45 1.992-4.45 4.45 1.992 4.45 4.45 4.45z" fill="#B7B7B7" fill-rule="evenodd" />
-                </svg>
-            <%end%>
-            <%= f.search_field :name , placeholder: 'Where do you want to go?'%>
-
-        </div>
-        <%= f.submit class: 'hidden'%>
-    <%end%>
     
     <div class="lists-scroll">
 
@@ -79,7 +67,24 @@
 
 <div id='map'></div>
 
+<section class="search_mask">
+    <div class="modal-overlay"></div>
+    <%=form_for(@destination) do |f|%>
 
+        <div class="search_container elevation-4">
+            
+            <%= label_tag(:destination_name, "search_icon") do%>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                    <title>search_icon</title>
+                    <path d="M9.223 10.482C8.263 11.185 7.08 11.6 5.8 11.6 2.597 11.6 0 9.003 0 5.8S2.597 0 5.8 0s5.8 2.597 5.8 5.8c0 1.28-.415 2.464-1.118 3.423l3.136 3.136c.35.35.355.913.005 1.263-.348.348-.912.347-1.264-.005l-3.137-3.136zM5.8 10.255c2.458 0 4.45-1.992 4.45-4.45s-1.992-4.45-4.45-4.45-4.45 1.992-4.45 4.45 1.992 4.45 4.45 4.45z" fill="#B7B7B7" fill-rule="evenodd" />
+                </svg>
+            <%end%>
+            <%= f.search_field :name , placeholder: 'Where do you want to go?'%>
+
+        </div>
+        <%= f.submit class: 'hidden'%>
+    <%end%>
+</section>
 
 
 
@@ -134,10 +139,25 @@ $( document ).ready(function() {
     });
 
     $('img').attr('draggable', false);
-    $("#search_label").on('click', function(){
+
+    $(".new-destination, #search_label").on('click', function(){
+        $(".search_mask").css('display','block');
         $("#destination_name").focus();
+        $("#destination_name").val("");
     });
+
+
 });
 
+$(document).keyup(function(e) {
+     if (e.keyCode == 78) { // escape key maps to keycode `27`
+        $(".search_mask").css('display','block');
+        $("#destination_name").focus();
+        $("#destination_name").val("");
+    }
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $(".search_mask").css('display','none');
+    }
+});
 
 </script>
