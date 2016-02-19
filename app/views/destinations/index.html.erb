@@ -19,11 +19,6 @@
             </a>
         </div>
     </header>
-    <div style="">
-        
-
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
-    </div>
     
     <div class="lists-scroll">
 
@@ -87,6 +82,13 @@
 </section>
 
 
+<nav class="menu_sidebar">
+    <div>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
+    </div>
+</nav>
+<span class="overlay"></span>
+
 
 <!-- Scripts -->
 
@@ -146,6 +148,16 @@ $( document ).ready(function() {
         $("#destination_name").val("");
     });
 
+
+    $(".menu").on('click', function(){
+        $(".menu_sidebar").addClass("menu-open");
+        $(".overlay").addClass("overlay_open");
+    });
+
+    $(".overlay").on('click', function(){
+        $(".menu_sidebar").removeClass("menu-open");
+        $(".overlay").removeClass("overlay_open");
+    });
 
 });
 
