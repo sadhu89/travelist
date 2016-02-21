@@ -24,7 +24,7 @@
 
         <ul>
             <% @destinations.each do |destination|%>
-                <li <%= "class='first'".html_safe if destination.position==1%>>
+                <li <%= "class='first'".html_safe if destination.position==@destinations.size%>>
                     <figure>
                         <img src="<%=destination.image_url%>" width="280" height="280">
                         <div class="shadow_mask"></div>

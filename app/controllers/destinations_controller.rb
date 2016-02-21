@@ -2,7 +2,7 @@ class DestinationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-  	@destinations=current_user.destinations
+  	@destinations=current_user.destinations.desc(:position)
   	@destination=Destination.new
   end
 
