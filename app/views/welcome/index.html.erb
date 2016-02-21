@@ -39,7 +39,7 @@
         <%= form_for(:user, url: registration_path(:user)) do |f| %>
             <%= f.text_field :name, :placeholder => "Full Name", autofocus: true%>
 
-            <%= f.email_field :email, :placeholder => "Email Address", autofocus: true%>
+            <%= f.email_field :email, :placeholder => "Email Address"%>
 
             <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
