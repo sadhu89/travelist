@@ -573,8 +573,8 @@ figure{
 }
 
 .menu_sidebar{
-    left: -250px;
-    width: 250px;
+    left: -266px;
+    width: 266px;
     height: 100%;
     top: 0;
     z-index: 1002;
@@ -585,7 +585,42 @@ figure{
     -webkit-transition: all 0.35s ease;
     -moz-transition: all 0.35s ease;
     transition: all 0.35s ease;
-    padding: 40px;
+    padding: 32px 40px;
+
+    .close_sidebar{
+        display: inline-block;
+        a{
+            display: block;
+            height: 24px;
+            width: 24px;
+        }
+        i{
+            color: #8B9297; 
+        }
+    }
+
+    .user_info{
+        display: block;
+        margin-top: 36px;
+        .user_photo{
+            display: inline-block;
+            background-color: #5ac9e3;
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        .user_name{
+            color: #8B9297;
+            margin-top: 8px;
+        }
+    }
+
 }
 
 

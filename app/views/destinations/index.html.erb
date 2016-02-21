@@ -83,6 +83,26 @@
 
 
 <nav class="menu_sidebar">
+    <div class="close_sidebar">
+        <a href="#">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+
+    <div class="user_info">
+        
+        <div class="avatar">        
+            <div class="user_photo">
+                <span>LD</span>
+            </div>
+        </div>
+        
+        <div class="user_name">
+            <%= current_user.name %>
+        </div>
+    
+    </div>
+
     <div>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
     </div>
@@ -156,7 +176,7 @@ $( document ).ready(function() {
         $(".overlay").addClass("overlay_open");
     });
 
-    $(".overlay").on('click', function(){
+    $(".overlay, .close_sidebar").on('click', function(){
         $(".menu_sidebar").removeClass("menu-open");
         $(".overlay").removeClass("overlay_open");
     });
