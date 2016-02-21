@@ -37,4 +37,7 @@ class User
   field :name,               type: String, default: ""
   has_many :destinations
 
+  def remember_me
+    true
+  end
 end
