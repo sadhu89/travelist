@@ -291,6 +291,8 @@ header{
     padding-left: 4px;
     padding-top: 32px;
     padding-bottom: 16px;
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
     .menu{
         display: inline-block;
         a{
@@ -329,6 +331,10 @@ header{
         }
     }
 
+}
+
+.header-shadow{
+    box-shadow: 0 -4px 0px 4px #FFFFFF, 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .lists-scroll{
