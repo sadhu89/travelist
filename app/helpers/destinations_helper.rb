@@ -19,4 +19,11 @@ module DestinationsHelper
 		}
 		"#{h.to_json}".html_safe 
 	end
+
+	def get_initials name
+		first, second = name.strip.split(" ")
+		first ||= " "
+		second ||= " "
+		(first[0]+second[0]).upcase
+	end
 end

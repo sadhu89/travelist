@@ -4,6 +4,7 @@ class DestinationsController < ApplicationController
   def index
   	@destinations=current_user.destinations.desc(:position)
   	@destination=Destination.new
+    @user = current_user
   end
 
   def create
