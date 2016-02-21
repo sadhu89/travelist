@@ -37,8 +37,7 @@
 
 
         <%= form_for(:user, url: registration_path(:user)) do |f| %>
-
-            <input placeholder="Full Name" autofocus="autofocus" type="text">
+            <%= f.text_field :name, :placeholder => "Full Name", autofocus: true%>
 
             <%= f.email_field :email, :placeholder => "Email Address", autofocus: true%>
 
