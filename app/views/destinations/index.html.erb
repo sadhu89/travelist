@@ -82,50 +82,8 @@
 </section>
 
 
-<nav class="menu_sidebar">
-    <div class="close_sidebar">
-        <a href="#">
-            <i class="material-icons">close</i>
-        </a>
-    </div>
+<%= render "menu" %>
 
-    <div class="user_info">
-        
-        <div class="avatar">        
-            <div class="user_photo">
-                <span><%= get_initials(@user.name)  %></span>
-            </div>
-        </div>
-        
-        <div class="user_name">
-            <%= current_user.name %>
-        </div>
-    
-    </div>
-
-    <div class="list-items">
-        <ul>
-            <li>
-                <a href="/destinations">
-                    <i class="material-icons">photo</i>
-                    <span>Destinations</span>
-                </a>
-            </li>
-            <li>
-                <a href="/destinations/journey">
-                    <i class="material-icons">collections</i>
-                    <span>Journey</span>
-                </a>
-            </li>
-        </ul>
-    </div> 
-
-    <div class="logout">
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
-    </div>
-
-</nav>
-<span class="overlay"></span>
 
 
 <!-- Scripts -->
