@@ -103,9 +103,27 @@
     
     </div>
 
-    <div>
+    <div class="list-items">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="material-icons">photo</i>
+                    <span>Destinations</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="material-icons">collections</i>
+                    <span>Journey</span>
+                </a>
+            </li>
+        </ul>
+    </div> 
+
+    <div class="logout">
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  
     </div>
+
 </nav>
 <span class="overlay"></span>
 

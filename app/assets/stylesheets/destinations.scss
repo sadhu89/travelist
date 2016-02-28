@@ -602,6 +602,10 @@ figure{
     .user_info{
         display: block;
         margin-top: 36px;
+        margin-bottom: 48px;
+        .avatar{
+            display: inline-block;
+        }
         .user_photo{
             display: inline-block;
             background-color: #5ac9e3;
@@ -618,6 +622,31 @@ figure{
         .user_name{
             color: #8B9297;
             margin-top: 8px;
+            margin-left: 8px;
+            display: inline-block;
+        }
+    }
+
+    .logout{
+        position: absolute;
+        bottom: 20px;
+        a{
+            color: #AFAFAF;
+        }
+    }
+
+    .list-items{
+        li{
+            margin-bottom: 24px;
+        }
+        a{
+            color: #848484;
+            span{
+                display: inline-block;
+                bottom: 6px;
+                margin-left: 6px;
+                position: relative;
+            }
         }
     }
 
