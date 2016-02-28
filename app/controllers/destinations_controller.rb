@@ -7,6 +7,12 @@ class DestinationsController < ApplicationController
     @user = current_user
   end
 
+  def journey
+    @destinations=current_user.destinations.desc(:position)
+    @destination=Destination.new
+    @user = current_user
+  end
+
   def create
   	current_user.destinations.create(destination_params)
   	redirect_to root_path
