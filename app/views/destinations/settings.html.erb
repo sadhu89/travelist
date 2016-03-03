@@ -1,0 +1,102 @@
+
+
+
+<!-- Scripts -->
+
+<script>
+
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2FkaHU4OSIsImEiOiJjaWl4dzZic3cwMDF5dWRsd3BnMTgzaHE3In0.uT95amtQp81LBXzcUkADng';
+var map = L.mapbox.map('map', 'mapbox.streets', { zoomControl: false }, {
+        minZoom: 2,
+        maxZoom: 12
+
+    }).setView([38.91338, -77.03236], 3);
+
+new L.Control.Zoom({ position: 'topright' }).addTo(map);
+
+<% @destinations.each do |destination| %>
+    L.mapbox.featureLayer(<%= to_geojson destination %>).addTo(map);
+<%end%>
+
+</script>
+
+<script>
+
+$( document ).ready(function() {
+
+    if (navigator.geolocation) {
+        map.locate();
+        var myLayer = L.mapbox.featureLayer().addTo(map);
+            map.on('locationfound', function(e) {
+
+            myLayer.setGeoJSON({
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [e.latlng.lng, e.latlng.lat]
+                },
+                properties: {
+                    'title': 'Here I am!',
+                    'marker-color': '#ff8888',
+                    'marker-symbol': 'star'
+                }
+            });
+        });
+    } 
+
+
+    $(".lists-scroll").scroll(function() {
+        if($(".lists-scroll").scrollTop() > 10){
+            $('.new_destination').addClass("top-shadow");
+        }else if($(".lists-scroll").scrollTop() <= 10){
+            $('.new_destination').removeClass("top-shadow");
+        }
+    });
+
+    $('img').attr('draggable', false);
+
+    $(".new-destination, #search_label").on('click', function(){
+        $(".search_mask").css('display','block');
+        $("#destination_name").focus();
+        $("#destination_name").val("");
+    });
+
+
+    $(".menu").on('click', function(){
+        $(".menu_sidebar").addClass("menu-open");
+        $(".overlay").addClass("overlay_open");
+    });
+
+    $(".overlay, .close_sidebar").on('click', function(){
+        $(".menu_sidebar").removeClass("menu-open");
+        $(".overlay").removeClass("overlay_open");
+    });
+
+
+    $(".lists-scroll").on('scroll', function(){
+        scrollPosition = $(this).scrollTop();
+        if (scrollPosition >= 38) {
+            $("header").addClass("header-shadow");
+        }else{
+            $("header").removeClass("header-shadow");
+        }
+    });
+
+});
+
+$(document).keyup(function(e) {
+    if( $(".search_mask").css('display').toLowerCase() == 'none') {
+        if (e.keyCode == 78) { // escape key maps to keycode `27`
+            event.preventDefault();
+            $(".search_mask").css('display','block');
+            $("#destination_name").focus();
+            $("#destination_name").val("");
+        }
+    }
+
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $(".search_mask").css('display','none');
+    }
+});
+
+</script>

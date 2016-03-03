@@ -22,17 +22,26 @@
     <div class="list-items">
         <ul>
             <li>
-                <a href="/destinations">
+                <%= link_to destinations_path, class: cp('/destinations') do %>
                     <i class="material-icons">photo</i>
                     <span>Destinations</span>
-                </a>
+                <% end %>
             </li>
+
             <li>
-                <a href="/destinations/journey">
+                <%= link_to destinations_journey_path, class: cp('/destinations/journey') do %>
                     <i class="material-icons">collections</i>
                     <span>Journey</span>
-                </a>
+                <% end %>
             </li>
+
+            <li>
+                <%= link_to destinations_settings_path, class: cp('/destinations/settings') do %>
+                    <i class="material-icons">settings</i>
+                    <span>Settings</span>
+                <% end %>
+            </li>
+
         </ul>
     </div> 
 
