@@ -23,6 +23,11 @@ class DestinationsController < ApplicationController
     redirect_to root_path
   end
 
+  def settings
+    @destinations=current_user.destinations.desc(:position)
+    @user = current_user
+  end
+
   private
   def destination_params
   	params.require(:destination).permit(:name)
