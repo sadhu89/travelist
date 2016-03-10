@@ -141,11 +141,20 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     -webkit-appearance: none;
 }
 
+label{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    color: #B3B3B3;
+    letter-spacing: 0.2px;
+    margin-bottom: 4px;
+    display: block;
+}
+
 input{
     height: 38px;
     padding: 0 15px;
     color: $boulder;
-/*    margin-bottom: 12px !important;*/
     width: 100%;
     font-size: 15px;
     outline: none;
