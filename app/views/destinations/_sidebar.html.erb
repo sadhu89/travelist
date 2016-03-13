@@ -1,0 +1,27 @@
+<div class="sidebar">
+
+    <div class="lists-inner">
+        <header>
+            <div class="menu">
+                <a href="#">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <span class="section-title"><%= yield :title %></span>
+                </div>
+            </div>
+            <div class="new-destination">
+                <a href="#">
+                    <i class="material-icons">add_location</i>
+                </a>
+            </div>
+        </header>
+        <% if current_page? destinations_settings_path %>
+            <%= render 'user_form' %>
+        <% else %>
+            <%= render 'destinations_list' %>
+        <% end %>
+    </div>
+</div>
