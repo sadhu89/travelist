@@ -8,6 +8,7 @@ class Destination
   field :priority, type: Integer
   field :image_url, type: String
   field :coordinates, type: Array
+  field :visited, type: Boolean, default: false
 
   validates :name, :uniqueness => { :case_sensitive => false }
   validates :coordinates, uniqueness: true
@@ -20,4 +21,15 @@ class Destination
   end
 
   belongs_to :user
+
+  scope :visited,     -> {where(visited:true)}
+  scope :non_visited, -> {where(visited:false)}
+
+  def mark_visited
+    self.visited = true
+  end
+
+  def mark_non_visited
+    self.visited = false
+  end
 end

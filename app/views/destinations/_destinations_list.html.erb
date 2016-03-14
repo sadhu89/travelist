@@ -16,7 +16,11 @@
                 <div id="jq-dropdown-<%="#{destination.id}"%>" class="jq-dropdown jq-dropdown-tip">
                     <ul class="jq-dropdown-menu">
                         <li>
-                            <a href="#">Mark as Visited</a>
+                            <% if destination.visited?%>
+                                <%= link_to "Mark as Non-visited", destination_visit_path(destination), method: :delete%>
+                            <% else %>
+                                <%= link_to "Mark as Visited", destination_visit_path(destination), method: :post%>
+                            <% end %>
                         </li>
                         <li>
                             <%= link_to "Delete", destination, method: :delete %>

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {registrations: 'registrations'}
   root 'welcome#index'
-  resources :destinations, only: [:index,:create,:destroy]
+  resources :destinations, only: [:index,:create,:destroy] do 
+    resource :visit, only: [:create, :destroy]
+  end
   get 'destinations/journey' => 'destinations#journey'
   get 'destinations/settings' => 'destinations#settings'
   # The priority is based upon order of creation: first created -> highest priority.

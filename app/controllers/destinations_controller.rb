@@ -2,13 +2,13 @@ class DestinationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-  	@destinations=current_user.destinations.desc(:position)
+  	@destinations=current_user.destinations.non_visited.desc(:position)
   	@destination=Destination.new
     @user = current_user
   end
 
   def journey
-    @destinations=current_user.destinations.desc(:position)
+    @destinations=current_user.destinations.visited.desc(:position)
     @destination=Destination.new
     @user = current_user
   end
