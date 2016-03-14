@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'registrations'}
   root 'welcome#index'
   resources :destinations, only: [:index,:create,:destroy]
   get 'destinations/journey' => 'destinations#journey'
