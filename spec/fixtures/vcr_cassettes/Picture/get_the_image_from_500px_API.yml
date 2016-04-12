@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.500px.com/v1/photos/search?consumer_key=g7dOnHfBDapHBrdAW81Tr7wHBlK5v9cy9iPdLOsU&image_size=600&only=travel,landscapes&rpp=1&sort=highest_rating&tag=Australia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Apr 2016 17:18:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _hpx1=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiJTcyOWEzMTU3OGVlNGM2ODgzMWUwY2ZlZThjYmQ2ZWQwBjsAVEkiCWhvc3QGOwBGIhJhcGkuNTAwcHguY29t--39cc76485f4f3efb5188771efda454fed7ed04a6;
+        domain=.500px.com; path=/; HttpOnly
+      X-Request-Id:
+      - 3741fb2c-14a4-45c8-bd1d-7ffb5482b362
+      X-Runtime:
+      - '0.051021'
+      X-Rack-Cache:
+      - miss
+      Server:
+      - api23
+    body:
+      encoding: ASCII-8BIT
+      string: '{"current_page":1,"total_pages":1000,"total_items":34632,"photos":[{"id":105604077,"user_id":591737,"name":"Escher
+        Pool","description":"Hammersley Gorge\nKarijini National Park\n\nI''ll be
+        honest. When Marianne and I arrived here and walked up to the ''spa pool''
+        from below, we were initially underwhelmed. It''s really only after you start
+        exploring the area and its bizarre angles that you start to appreciate how
+        unique it is. The other challenge for us was to come up with something different
+        from what has been offered. I hope this darker rendition with plays of light
+        (late afternoon and polariser work) gives a different perspective.\n\n<a href=\"http://www.everlookphotography.com/p432426704/h5753b5c6#h5753b5c6\">[f11
+        ebook]</a>\n\n\n<a href=\"http://www.everlookphotography.com/\">[Prints and
+        Tutorials]</a> \n<a href=\"http://www.facebook.com/everlookphotography\">[Facebook]</a>
+        \n<a href=\"http://www.instagram.com/everlook_photography\">[Instagram]</a>\n<a
+        href=\"http://flickr.com/photos/dmtoh\">[Flickr]</a>","camera":"Canon EOS
+        5D Mark III","lens":"EF16-35mm f/2.8L II USM","focal_length":"16","iso":"200","shutter_speed":"45","aperture":"11","times_viewed":70055,"rating":50.1,"status":1,"created_at":"2015-04-19T06:30:47-04:00","category":8,"location":null,"latitude":-22.2588715896346,"longitude":117.984819705016,"taken_at":"2015-04-09T18:09:26-04:00","hi_res_uploaded":0,"for_sale":false,"width":1350,"height":900,"votes_count":3527,"favorites_count":2047,"comments_count":210,"nsfw":false,"sales_count":0,"for_sale_date":null,"highest_rating":99.9,"highest_rating_date":"2015-04-20T04:02:27-04:00","license_type":0,"converted":27,"collections_count":-8,"crop_version":12,"privacy":false,"profile":true,"image_url":"https://drscdn.500px.org/photo/105604077/w%3D600_h%3D600/b600416ad765d71aac8ea5b9761cb1a3?v=12","images":[{"size":600,"url":"https://drscdn.500px.org/photo/105604077/w%3D600_h%3D600/b600416ad765d71aac8ea5b9761cb1a3?v=12","https_url":"https://drscdn.500px.org/photo/105604077/w%3D600_h%3D600/b600416ad765d71aac8ea5b9761cb1a3?v=12","format":"jpeg"}],"url":"/photo/105604077/escher-pool-by-dylan-toh-marianne-lim","positive_votes_count":3527,"converted_bits":27,"share_counts":{"facebook":54,"pinterest":102,"twitter":235},"watermark":false,"image_format":"jpeg","licensing_requested":false,"user":{"id":591737,"username":"everlookphotography","firstname":"Dylan
+        Toh","lastname":" & Marianne Lim","city":"Adelaide","country":"Australia","usertype":0,"fullname":"Dylan
+        Toh  & Marianne Lim","userpic_url":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/1.jpg?17","userpic_https_url":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/1.jpg?17","cover_url":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/cover_2048.jpg?8","upgrade_status":0,"store_on":false,"affection":446629,"avatars":{"default":{"https":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/1.jpg?17"},"large":{"https":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/2.jpg?17"},"small":{"https":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/3.jpg?17"},"tiny":{"https":"https://pacdn.500px.org/591737/eba20ece2253b65d8c937745934c5f1074c2395b/4.jpg?17"}},"followers_count":26176}}]}'
+    http_version: 
+  recorded_at: Tue, 12 Apr 2016 17:18:36 GMT
+recorded_with: VCR 3.0.1

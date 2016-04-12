@@ -53,6 +53,8 @@ end
 
 group :test do 
   gem 'capybara'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 gem 'rails_12factor', group: :production
